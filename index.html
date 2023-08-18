@@ -2,6 +2,10 @@
 <html lang="en">  
 <head>
     <title>Crepe Awareness</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crepe Awareness</title>
+    <script src="script.js"></script>
 </head>
 <body>
     <h1>The one breakfast food with extreme versatility</h1>
@@ -21,14 +25,14 @@
     <script>
         const recipeButton = document.getElementById("recipe-button");
         const recipeOutput = document.getElementById("recipe-output");
-        const fillingType = document.getElementById("filling-type");
+        const flavorType = document.getElementById("flavor-type");
 
         recipeButton.addEventListener("click", function () {
-            const selectedFilling = fillingType.value;
+            const selectedFlavor = flavorType.value;
 
-            if (selectedFilling === "Sweet") {
+            if (selectedFlavor === "sweet") {
                 recipeOutput.innerHTML = "<h2>Sweet Crepe Recipe</h2><p>Instructions for making delicious Nutella crepes...</p>";
-            } else if (selectedFilling === "savory") {
+            } else if (selectedFlavor === "savory") {
                 recipeOutput.innerHTML = "<h2>Savory Crepe Recipe</h2><p>Instructions for making scrumptious strawberry-filled crepes...</p>";
             } else {
                 recipeOutput.innerHTML = "<p>Please select a filling to get the recipe.</p>";
