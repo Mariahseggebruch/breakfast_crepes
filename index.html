@@ -19,13 +19,23 @@
 
         /* Content styling */
         .container {
+            display: flex; /* Display children in a row */
             text-align: center;
             background-color: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
+            max-width: 800px;
             width: 100%;
+        }
+
+        /* Blank column styling */
+        .column {
+            flex: 1;
+            background-color: #e1efff; /* Light blue background color */
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px;
         }
 
         /* Button styling */
@@ -50,19 +60,24 @@
 </head>
 <body>
     <div class="container">
-        <h1>The one breakfast food with extreme versatility</h1>
-        <p>Sweet or savory? This is the question we are all faced with when choosing what to eat for breakfast. In our busy lives, we make decisions every day, some large and some small. When it comes to picking food, why must we be put in a box? If you are experiencing confliction, crepes may be for you!</p>
-        <h2>Crepe Recipe</h2>
-        
-        <label for="flavor-type">Select Flavor:</label>
-        <select id="flavor-type">
-            <option value="sweet">Sweet</option>
-            <option value="savory">Savory</option>
-        </select>
+        <div class="column"></div> <!-- Blank column -->
+        <div class="column">
+            <h1>The one breakfast food with extreme versatility</h1>
+            <p>Sweet or savory? This is the question we are all faced with when choosing what to eat for breakfast. In our busy lives, we make decisions every day, some large and some small. When it comes to picking food, why must we be put in a box? If you are experiencing confliction, crepes may be for you!</p>
+            <h2>Crepe Recipe</h2>
+            
+            <label for="flavor-type">Select Flavor:</label>
+            <select id="flavor-type">
+                <option value="sweet">Sweet</option>
+                <option value="savory">Savory</option>
+            </select>
 
-        <button id="recipe-button">Get Recipe</button>
+            <button id="recipe-button">Get Recipe</button>
 
-        <div id="recipe-output"></div>
+            <div id="recipe-output"></div>
+        </div>
+        <div class="column"></div> <!-- Blank column -->
     </div>
 </body>
 </html>
+
